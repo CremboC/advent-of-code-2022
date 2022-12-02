@@ -1,10 +1,14 @@
 mod day01;
+mod day02;
 
 use std::time::Instant;
 
 fn main() {
-    time(String::from("part1"), || day01::part1());
-    time(String::from("part2"), || day01::part2());
+    time(String::from("day 1 part 1"), || day01::part1());
+    time(String::from("day 1 part 2"), || day01::part2());
+
+    time(String::from("day 2 part 1"), || day02::part1());
+    time(String::from("day 2 part 2"), || day02::part2());
 }
 
 fn time(name: String, f: fn()) {
