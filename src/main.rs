@@ -3,6 +3,7 @@ mod day02;
 mod day03;
 mod day04;
 mod day05;
+mod day06;
 
 use std::time::Instant;
 
@@ -21,6 +22,9 @@ fn main() {
 
     time(String::from("day 5 part 1"), || day05::part1());
     time(String::from("day 5 part 2"), || day05::part2());
+
+    time(String::from("day 6 part 1"), || day06::part1());
+    time(String::from("day 6 part 2"), || day06::part2());
 }
 
 fn time(name: String, f: fn()) {
