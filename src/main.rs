@@ -4,6 +4,7 @@ mod day03;
 mod day04;
 mod day05;
 mod day06;
+mod day07;
 
 use std::time::Instant;
 
@@ -25,11 +26,14 @@ fn main() {
 
     time(String::from("day 6 part 1"), || day06::part1());
     time(String::from("day 6 part 2"), || day06::part2());
+
+    time(String::from("day 7 part 1"), || day07::part1());
+    time(String::from("day 7 part 2"), || day07::part2());
 }
 
 fn time(name: String, f: fn()) {
     let start = Instant::now();
     f();
     let duration = start.elapsed();
-    println!("Time elapsed in {:?} is: {:?}", name, duration);
+    println!("Time elapsed in {:?} is: {:?}\n", name, duration);
 }

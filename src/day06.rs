@@ -1,4 +1,4 @@
-use std::collections::HashSet;
+use itertools::Itertools;
 use std::fs;
 
 fn search(w: usize) -> usize {
@@ -6,8 +6,7 @@ fn search(w: usize) -> usize {
     let mut result = w - 1;
     for window in input.windows(w) {
         result += 1;
-        let set = HashSet::<u8>::from_iter(window.iter().map(|x| *x));
-        if set.len() == w {
+        if window.iter().all_unique() {
             break;
         }
     }
