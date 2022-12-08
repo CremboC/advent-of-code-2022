@@ -105,6 +105,7 @@ fn calculate_sizes() -> HashMap<String, u32> {
         out
     }
 
+    const BASE: Vec<String> = vec![];
     let mut current_path: Vec<String> = vec![];
     let mut sizes = HashMap::<String, u32>::new();
     for cmd in cmds {
@@ -116,7 +117,7 @@ fn calculate_sizes() -> HashMap<String, u32> {
                         current_path.pop();
                     }
                 }
-                Cd::Home => current_path = vec![],
+                Cd::Home => current_path = BASE,
             },
             cmd::Cmd::File(file) => {
                 let current_path_strings = vec_path_to_strings(&current_path);
