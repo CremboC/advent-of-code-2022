@@ -53,14 +53,17 @@ pub fn part2() {
             for (i, j) in (0..10).tuple_windows::<(_, _)>() {
                 if !are_adjacent(&rope[i], &rope[j]) {
                     rope[j].add(get_add(&rope[i], &rope[j]));
+
+                    if j == 9 {
+                        visited_set.insert((rope[9].y, rope[9].x));
+                    }
                 }
             }
-            visited_set.insert((rope[9].y, rope[9].x));
         }
     }
 
     let result = visited_set.len();
-    println!("D09P1 {}", result);
+    println!("D09P2 {}", result);
 }
 
 fn are_adjacent(p1: &Pos, p2: &Pos) -> bool {
