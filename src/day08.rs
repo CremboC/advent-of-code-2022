@@ -6,7 +6,7 @@ pub fn part1() {
     const Y_MAX: usize = 99;
 
     let grid = include_bytes!("../inputs/day08.txt")
-        .rsplit(|&x| x == b'\n')
+        .split(|&x| x == b'\n')
         .map(|line| line.iter().map(|&s| s).collect())
         .collect::<Vec<Vec<u8>>>();
 
@@ -38,7 +38,7 @@ pub fn part2() {
     const Y_MAX: usize = 99;
 
     let grid = include_bytes!("../inputs/day08.txt")
-        .rsplit(|&x| x == b'\n')
+        .split(|&x| x == b'\n')
         .map(|line| line.iter().map(|&s| s).collect())
         .collect::<Vec<Vec<u8>>>();
 
