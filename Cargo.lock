@@ -8,6 +8,7 @@ version = "0.1.0"
 dependencies = [
  "itertools",
  "nom",
+ "reikna",
 ]
 
 [[package]]
@@ -46,3 +47,9 @@ dependencies = [
  "memchr",
  "minimal-lexical",
 ]
+
+[[package]]
+name = "reikna"
+version = "0.12.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "587f2b12c725829d56d8192817535cbfe3c4b5daf294622765cec5969d980eca"
