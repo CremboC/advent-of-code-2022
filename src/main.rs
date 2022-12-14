@@ -10,6 +10,7 @@ mod day09;
 mod day10;
 mod day11;
 mod day12;
+mod day13;
 
 use std::time::Instant;
 
@@ -49,6 +50,9 @@ fn main() {
 
     time("day 12 part 1", || day12::part1());
     time("day 12 part 2", || day12::part2());
+
+    time("day 13 part 1", || day13::part1());
+    time("day 13 part 2", || day13::part2());
 }
 
 fn time(name: &str, f: fn()) {
