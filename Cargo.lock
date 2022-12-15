@@ -10,6 +10,7 @@ dependencies = [
  "ndarray",
  "nom",
  "num-integer",
+ "num-traits",
  "priority-queue",
  "reikna",
 ]
